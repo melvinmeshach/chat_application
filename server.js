@@ -16,7 +16,7 @@ var server = require('http').createServer()
   , wss = new WebSocketServer({ server: server })
   , express = require('express')
   , app = express()
-  , port = 5093;
+  , port = process.env.PORT || 3000;
 
 
 //var wsModule=require('ws').Sender;
