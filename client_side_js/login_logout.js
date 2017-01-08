@@ -32,20 +32,26 @@ var message="";
 		$('#loginPage').css({display: 'none'});
 		//addListeners();
 		reloadKeyAndMouseListeners(document);
-		}
+		window.onbeforeunload = function(){doBeforeClose();} 
+        }
 		else{
 		message='<br>User <b>'+from+'</b> joined the chat room';
 		addUser(from);
 		
 		$('.Globalchat').append(message);
-		window.onbeforeunload = function() { 
-
-	    logout();
-	    };
+/*
+ 		$(window).bind("beforeunload", function() { 
+        	//logout();
+	    	return doBeforeClose; 
+    	});*/
+		
 		$('#loginError').html('');
 		//initiateCheck();
 		checkInActive();
 }}
+function doBeforeClose(){
+		logout();
+}
 function doLoginFailed() {
 	$('#loginError').html(userName+" name already taken please enter another name");
 	$('#nickName').val('');
