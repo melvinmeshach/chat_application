@@ -31,7 +31,7 @@ var server = require('http').createServer()
 app.get('/', function(req, res){
 //	var express=require('express');
 	app.use(express.static(path.join(__dirname)));
-	res.sendFile('chat.html');
+	res.sendFile('./chat.html');
 });
 
 
