@@ -1,6 +1,10 @@
-var ws=new WebSocket('ws://'+window.location.host+':'+window.location.port);
+var ws=createWebSocket();
 var interval=null;
 var active=true;
+function createWebSocket() {
+    var protocolPrefix = (window.location.protocol === 'https:') ? 'wss:' : 'ws:';
+    return new WebSocket(protocolPrefix + '//' + location.host);
+}
 function controller(responseString){
 		var jsonResponse=JSON.parse(responseString);
 		var purpose=jsonResponse.purpose;
