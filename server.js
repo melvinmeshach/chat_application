@@ -32,7 +32,7 @@ app.get('/', function(req, res){
 //	var express=require('express');
 	app.use(express.static(path.join(__dirname)));
 
-	res.sendFile(path.join(__dirname, '../chat_application', 'chat.html'));
+	res.sendFile(path.join(__dirname, 'chat.html'));
 	//res.sendFile('./chat.html');
 });
 
