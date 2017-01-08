@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat</title>
+	<script type="text/javascript" src="./client_side_js/jquery-3.1.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script type="text/javascript" src="./client_side_js/controller.js"></script>
+	<script type="text/javascript" src="./client_side_js/login_logout.js"></script>
+ 	<script type="text/javascript" src="./client_side_js/add_and_remove_user.js"></script>
+	<script type="text/javascript" src="./client_side_js/initiate_and_end_chat.js"></script>
+	<script type="text/javascript" src="./client_side_js/active_inactive_check.js"></script>
+	<script type="text/javascript" src="./client_side_js/send_recieve_message.js"></script>
+	<script type="text/javascript" src="./client_side_js/notify_typing.js"></script>
+
+	</head>
+<body>
+<div id="loginPage">
+	NickName:<input type="text" id="nickName"><button id="login" onclick="login();">Login</button><br>
+	<label id="loginError"></label>
+</div>
+<div id="chat" style="display: none;">
+<div id="availableUsersDiv">
+<div id="nickNameDisp"></div>
+<h4>Available Users:</h4>
+<!-- 
+<button id='newRoomButton'>New Room</button> -->
+</div>
+<div id="chatSection">
+<div id="headerDiv">
+	</div>
+	<div id="chatArea">
+	</div>
+</div>
+</div>
+
+</body>
+</html>
