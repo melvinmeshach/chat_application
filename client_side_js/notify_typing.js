@@ -18,8 +18,8 @@ function doNotifyTyping(jsonResponse){
 
 		}
 		else{
-		$('#'+to+'notifyUser').text(from+" is typing");
-		setTimeout(function(){ $('#'+to+'notifyUser').text(''); }, 3000);;
+		$('#'+from+'notifyUser').text(from+" is typing");
+		setTimeout(function(){ $('#'+from+'notifyUser').text(''); }, 3000);;
 
 			}
 }
