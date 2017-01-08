@@ -1,4 +1,4 @@
-var ws=new WebSocket('ws://'+window.location.host);
+var ws=new WebSocket('ws://'+window.location.host+':'+window.location.port);
 var interval=null;
 var active=true;
 function controller(responseString){
