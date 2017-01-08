@@ -1,4 +1,4 @@
-var ws=new WebSocket('ws://www.letz-chat-here.herokuapp.com:'+process.env.PORT);
+var ws=new WebSocket('ws://'+window.location.host);
 var interval=null;
 var active=true;
 function controller(responseString){
